@@ -62,7 +62,7 @@ fun BusinessCardScreen() {
             val isWideScreen = maxWidth > 600.dp
 
             if (isWideScreen) {
-                // === ЛАНДШАФТ / ПЛАНШЕТ ===
+
                 Row(
                     modifier = Modifier
                         .fillMaxSize()
@@ -70,7 +70,6 @@ fun BusinessCardScreen() {
                     horizontalArrangement = Arrangement.spacedBy(48.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    // Фото слева
                     Image(
                         painter = painterResource(id = R.drawable.my_photo),
                         contentDescription = "Моё фото",
@@ -80,7 +79,7 @@ fun BusinessCardScreen() {
                         contentScale = ContentScale.Crop
                     )
 
-                    // Информация справа
+
                     Column(
                         horizontalAlignment = Alignment.Start,
                         verticalArrangement = Arrangement.Center
@@ -105,7 +104,7 @@ fun BusinessCardScreen() {
                     }
                 }
             } else {
-                // === ПОРТРЕТ (телефон) ===
+
                 Column(
                     modifier = Modifier
                         .fillMaxSize()
